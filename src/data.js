@@ -15,25 +15,25 @@ export const TableData = [
         id: "3",
         firstName: "Aakash",
         lastName: "Sharma",
-        email: "majid@gmail.com",
+        email: "Aakash@gmail.com",
     },
     {
         id: "4",
         firstName: "Arun",
         lastName: "Sharma",
-        email: "majid@gmail.com",
+        email: "arun@gmail.com",
     },
     {
         id: "5",
         firstName: "shiv",
         lastName: "Gupta",
-        email: "majid@gmail.com",
+        email: "gupta@gmail.com",
     },
     {
         id: "6",
         firstName: "Adil",
         lastName: "Mohammad",
-        email: "majid@gmail.com",
+        email: "adil@gmail.com",
     },
   ];
   

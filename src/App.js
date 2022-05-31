@@ -1,10 +1,14 @@
-import Home from "./Components/Home";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import EmployeeList from "./Components/EmployeeList";
+import EmployeeContextProvider from "./Context/EmployeeContext";
+
 function App() {
   return (
-    <div className="App">
-     <Home />
-    </div>
+    <>
+      <EmployeeContextProvider>
+        <EmployeeList />
+      </EmployeeContextProvider>
+    </>
   );
 }
 

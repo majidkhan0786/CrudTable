@@ -1,16 +1,16 @@
-import { createContext, useState } from "react";
-import { TableData } from "../data";
+// import { createContext, useState } from "react";
+// import { TableData } from "../data";
 
-export const EmployeeContext = createContext();
+// export const EmployeeContext = createContext();
 
-const EmployeeContextProvider = (props)=>{
-    const [employeeData] = useState([TableData]);
+// const EmployeeContextProvider = (props)=> {
+//     const [employeeData] = useState([TableData]);
 
-    return(
-        <EmployeeContext.Provider value={employeeData}>
-            {props.employeeData}
-        </EmployeeContext.Provider>
-    )
-};
+//     return(
+//         <EmployeeContext.Provider value={employeeData}>
+//             {props.employeeData}
+//         </EmployeeContext.Provider>
+//     )
+// };
 
-export default EmployeeContextProvider;
+// export default EmployeeContextProvider;

@@ -6,17 +6,18 @@ import { BiEdit } from 'react-icons/bi'
 import { MdDelete } from 'react-icons/md'
 import { GrFormView } from 'react-icons/gr'
 
-const Employee = (employeeData) => {
-  console.log(employeeData, 5451);
+const Employee = (props) => {
+  const { data, idx } = props
+
   return (
     <>
       <tr>
-        <th scope="row">1</th>
-        <td>{employeeData.firstName}</td>
-        <td> B </td>
-        <td> C@gmail.com</td>
+        <th scope="row">{idx + 1}</th>
+        <td>{data.firstName}</td>
+        <td>{data.lastName}</td>
+        <td>{data.email}</td>
         <td className="Btn-td">
-          <button className="btn btn-success">
+          <button className="btn btn-success seperate-style">
             <BiEdit /> Edit
           </button>
 
@@ -33,4 +34,4 @@ const Employee = (employeeData) => {
   )
 }
 
-export default Employee
+export default Employee;

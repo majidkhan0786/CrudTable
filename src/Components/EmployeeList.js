@@ -1,8 +1,3 @@
-// import React, { useState } from "react";
-// import { BiEdit } from 'react-icons/bi'
-// import { MdDelete } from 'react-icons/md'
-import { FiSearch } from 'react-icons/fi'
-// import { GrFormView } from 'react-icons/gr'
 import { MdAddCircleOutline } from 'react-icons/md'
 import './Components.css'
 import AddUpdateModal from './AddUpdateModal'
@@ -13,8 +8,7 @@ import { TableData } from '../data'
 import { useState } from 'react'
 
 const EmployeeList = () => {
-  const [employee, setEmployee] = useState({ TableData })
-  console.log(TableData, 446545)
+  const [employee] = useState(TableData)
 
   return (
     <>
@@ -34,28 +28,26 @@ const EmployeeList = () => {
           />
         </div>
 
-        <table class="table table-hover">
+        <table class="table">
           <thead class="thead-dark">
             <tr>
-              <th scope="col">S.No.</th>
+              <th scope="col">S.No</th>
               <th scope="col">First Name</th>
               <th scope="col">Last Name</th>
-              <th scope="col">E-mail</th>
+              <th scope="col">Email</th>
               <th scope="col">Action</th>
             </tr>
           </thead>
 
-          <tbody>
-            {employee &&
-              employee.length > 0 &&
-              employee.map((employeeData, index) => {
-                return (
-                  <tr>
-                    <Employee employeeData={employeeData} />
-                  </tr>
-                )
-              })}
-          </tbody>
+          {employee &&
+            employee.length > 0 &&
+            employee.map((employeeData, index) => {
+              return (
+                <>
+                  <Employee data = {employeeData} idx={index}/>
+                </>
+              )
+            })}
         </table>
       </div>
     </>
